@@ -45,3 +45,33 @@ i{
     font-weight: bolder;
     width: 100%;
 }
+
+#category-container{
+    margin-top: 30px;
+}
+
+.category-header{
+    background-color: #242423;
+    /*width: 200px !important;*/
+    border: 1px solid #242423;
+    border-radius: 20px 20px 0px 0px;
+
+    padding: 7px 20px;
+
+    justify-content: left;
+    text-align: left;
+}
+
+.category-body{
+    /*width: 200px !important;*/
+    padding: 12px 20px;    
+    margin-bottom: 15px;
+
+    border: 1px solid #242423;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 1px 3px 3px rgb(180, 180, 180);
+
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: left;    
+}
