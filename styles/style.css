@@ -1,3 +1,35 @@
 body{
-    font-family: 'Red Hat Display', sans-serif;
+    width: 750px;
+    overflow-x: hidden !important;
+    font-family: 'Red Hat Display', sans-serif !important;
+}
+
+h1{
+    font-weight: bolder !important;
+    padding: 0px 60px;
+}
+
+i{
+    color: #FCA311;
+}
+
+#navbar{
+    background-color: #242423;
+    padding: 7px 0px; 
+    box-shadow: 2px 5px 3px grey;
+
+    font-size: large;
+    justify-content: center;
+    text-align: center;    
+}
+
+
+.btn-link{
+    color: #FCA311 !important;
+}
+
+.content{
+    padding: 40px 50px;
+    justify-content: center;
+    text-align: center;
 }
