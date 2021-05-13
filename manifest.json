@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Favs by @dotcode",
+    "description": "Salve seus links de maneira organizada com o Favs by @dotcode!",
+    "version": "0.0.1",
+    "actions": {
+        "default_icon": "assets/icon.png",
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ]
+}
