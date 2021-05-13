@@ -33,3 +33,15 @@ i{
     justify-content: center;
     text-align: center;
 }
+
+
+.form-group{
+    margin-bottom: 20px !important;
+    text-align: left !important;
+}
+
+.btn-favs{
+    background-color: #FCA311 !important;
+    font-weight: bolder;
+    width: 100%;
+}
