@@ -3,7 +3,7 @@
     "name": "Favs by @dotcode",
     "description": "Salve seus links de maneira organizada com o Favs by @dotcode!",
     "version": "0.0.1",
-    "actions": {
+    "action": {
         "default_icon": "assets/icon.png",
         "default_popup": "index.html"
     },
