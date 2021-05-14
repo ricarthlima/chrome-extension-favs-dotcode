@@ -3,6 +3,7 @@ var btnPageSearch = document.getElementById("btnPageSearch");
 
 var pageAdd = document.getElementById("add-page");
 var pageSearch = document.getElementById("search-page");
+var pageLinks = document.getElementById("links-page");
 
 btnPageAdd.addEventListener("click", showAddPage);
 btnPageSearch.addEventListener("click", showSearchPage);
@@ -37,12 +38,24 @@ window.onload = function () {
 function showAddPage() {
     pageAdd.style.display = "block";
     pageSearch.style.display = "none";
+
+    pageLinks.style.display = "nome";
 }
 
 function showSearchPage() {
     getFavs();
     pageAdd.style.display = "none";
     pageSearch.style.display = "block";
+
+    pageLinks.style.display = "none";
+}
+
+function showLinksPage(categoryName) {
+    pageAdd.style.display = "none";
+    pageSearch.style.display = "none";
+
+    document.getElementById("link-catg-name").innerHTML = categoryName;
+    pageLinks.style.display = "block";
 }
 
 function saveFav() {
@@ -123,5 +136,59 @@ function populateSearchPage() {
 }
 
 function showListByCategory(categoryName) {
-    console.log(categoryName);
+    populateLinkPage(categoryName);
+    showLinksPage(categoryName);
+}
+
+function populateLinkPage(categoryName) {
+    var divLinksContainer = document.getElementById("links-container");
+    divLinksContainer.innerHTML = "";
+
+    for (var i = 0; i < listFavs.length; i++) {
+        var fav = listFavs[i];
+        if (fav["category"] == categoryName) {
+            //divLinksContainer.innerHTML += fav["url"];
+            var linkDiv = document.createElement("DIV");
+            linkDiv.id = "fav" + i.toString();
+
+            linkDiv.classList.add("row");
+            linkDiv.classList.add("justify-content-center");
+
+            linkDiv.innerHTML =
+                '<div class="row justify-content-center">' +
+                '<div class="link-header col-2">' +
+                '\'<img src="' + fav["iconUrl"] + '" class="sm-img">' +
+                '</div>' +
+                '<div class="link-body col-10">' +
+                '<div class="row align-items-center">' +
+                '<div class="col-9">' +
+                '<div class="row link-title">' +
+                fav["title"] +
+                '</div>' +
+                '<div class="row">' +
+                fav["annotations"] +
+                '</div>' +
+                '</div>' +
+                '<div class="col-3">' +
+                '<div class="row align-items-center">' +
+                '<div class="col-auto">' +
+                '<a href="' + fav["url"] + '" target="_blank">' +
+                '<img src="assets/link.png" width="20">' +
+                '</a>' +
+                '</div>' +
+                '<div class="col-auto">' +
+                '<button class="btn btn-nopadding">' +
+                '<img src="assets/delete.png" width="20">' +
+                '</button>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>' +
+                '</div>';
+
+            divLinksContainer.appendChild(linkDiv);
+
+        }
+    }
 }

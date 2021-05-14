@@ -75,3 +75,43 @@ i{
     font-weight: bolder;
     text-align: left;    
 }
+
+
+#links-container{
+    margin-top: 30px;
+}
+
+.link-header{
+    background-color: #242423;
+    border: 1px solid #242423;
+    border-radius: 20px  0px  0px 20px;    
+    box-shadow: 1px 3px 3px rgb(180, 180, 180);
+    
+    width: 60px !important;
+    margin-bottom: 15px;
+}
+
+.link-body{
+    border: 1px solid #242423;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 1px 3px 3px rgb(180, 180, 180);
+    padding: 10px 0px 10px 30px !important;
+    margin-bottom: 15px;
+}
+
+.link-title{
+    font-size: 1.5em;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.btn-nopadding{
+    padding: 0px !important;
+}
+
+
+.sm-img{
+    width: 32px !important;
+    height: 32px !important;
+    margin: auto;
+}
